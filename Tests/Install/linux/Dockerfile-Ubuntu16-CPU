@@ -11,7 +11,7 @@ RUN VISUAL=/root/visudo-helper.sh visudo
 
 COPY test_wrapper.sh /home/testuser
 COPY BinaryDrop.tar.gz /home/testuser
-COPY *.whl /home/testuser
+COPY CPU-Only/ /home/testuser
 
 RUN chown -R testuser:testuser /home/testuser
 
