@@ -5,7 +5,7 @@ ARG PY_VERSION
 ARG WHEEL_BASE_URL
 
 # Set up fake user / sudo environment:
-RUN apt-get update && apt-get install -y --no-install-recommends sudo
+RUN apt-get update && apt-get install -y --no-install-recommends sudo lsb-release
 RUN adduser --gecos "Test User" --disabled-password testuser && test -d /home/testuser
 COPY visudo-helper.sh prep-run-test.sh /root/
 RUN VISUAL=/root/visudo-helper.sh visudo
