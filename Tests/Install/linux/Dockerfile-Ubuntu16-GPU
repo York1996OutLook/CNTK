@@ -12,7 +12,7 @@ RUN VISUAL=/root/visudo-helper.sh visudo
 
 COPY test_wrapper.sh /home/testuser
 COPY BinaryDrop.tar.gz /home/testuser
-COPY GPU/ /home/testuser
+COPY GPU/ /home/testuser/GPU/
 
 RUN chown -R testuser:testuser /home/testuser
 
